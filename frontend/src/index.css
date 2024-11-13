@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+body{
+  margin: 0;
+  line-height: inherit;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: #FEFAF6;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #e7eadaa8;
+  border-radius: 10px;
+}
+i{
+  cursor: pointer;
+}
+i:hover{
+  color:rgba(224, 190, 37, 0.785);
+}
+
+/* Loader Animation */
+
+.s{
+  animation: s 1s infinite;
+  display: inline;
+ 
+}
+@keyframes s {
+  0%{
+    opacity:1;
+  }
+  25%{
+    opacity:0.5;
+  }
+  50%{
+    opacity:0.5;
+  }
+  75%{
+    opacity:0.5;
+  }
+  100%{
+    opacity:0.5;
+  }
+}
+.u{
+  animation: u 1s infinite;
+  display: inline;
+
+}
+@keyframes u {
+  0%{
+    opacity:0.5;
+  }
+  25%{
+    opacity:1;
+  }
+  50%{
+    opacity:0.5;
+  }
+  75%{
+    opacity:0.5;
+  }
+  100%{
+    opacity:0.5;
+  }
+}
+.d{
+  animation: d 1s infinite;
+  display: inline;
+ 
+}
+@keyframes d {
+  0%{
+    opacity:0.5;
+  }
+  25%{
+    opacity:0.5;
+  }
+  50%{
+    opacity:1;
+  }
+  75%{
+    opacity:0.5;
+  }
+  100%{
+    opacity:0.5;
+  }
+}
+.h{
+  animation: h 1s infinite;
+  display: inline;
+  
+}
+@keyframes h {
+  0%{
+    opacity:0.5;
+  }
+  25%{
+    opacity:0.5;
+  }
+  50%{
+    opacity:0.5;
+  }
+  75%{
+    opacity:1;
+  }
+  100%{
+    opacity:0.5;
+  }
+}
+.a{
+  animation: a 1s infinite;
+  display: inline;
+
+}
+@keyframes a {
+  0%{
+    opacity:0.5;
+  }
+  25%{
+    opacity:0.5;
+  }
+  50%{
+    opacity:0.5;
+  }
+  75%{
+    opacity:0.5;
+  }
+  100%{
+    opacity:1;
+  }
+  
+  
+}
+
+
+li{
+  cursor: pointer;
+}
+li:hover{
+  color:rgba(81, 92, 10, 0.546);
+}
+
+/* input */
+input,textarea {
+height: 40px;
+border: 1px solid rgb(55, 50, 50);
+width: 100%;
+padding-left: 20px;
+}
+
+
+input:focus{
+  outline: none;
+  border: 2px solid rgba(30, 29, 29, 0.927);
+  border-radius:7px;
+}
+textarea{
+  height: 150px;
+  padding-top: 10px;
+}
+
