@@ -19,7 +19,6 @@ function App() {
     (state) => state.root
   );
   const dispatch = useDispatch();
-  axios.defaults.withCredentials = true;
 
   const getPortfolioData = async () => {
     try {
@@ -46,13 +45,12 @@ function App() {
     }
   }, [portfolioData]);
 
-  axios.post('https://sudha-portfolio-five.vercel.app/admin')
   return (
     <>
       <BrowserRouter>
         {loading ? <Loader /> : null}
         <Routes>
-          <Route path="/" element={<Home/>} />
+          <Route path="/" element={<Home />} />
           <Route path="/admin" element={<Admin />} />
           <Route path="/admin-login" element={<Login />} />
         </Routes>
