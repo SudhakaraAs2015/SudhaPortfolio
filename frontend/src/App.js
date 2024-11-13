@@ -19,6 +19,8 @@ function App() {
     (state) => state.root
   );
   const dispatch = useDispatch();
+  axios.defaults.withCredentials = true;
+
   const getPortfolioData = async () => {
     try {
       dispatch(ShowLoading());
@@ -43,6 +45,8 @@ function App() {
       getPortfolioData();
     }
   }, [portfolioData]);
+
+  axios.post('https://sudha-portfolio-five.vercel.app/')
   return (
     <>
       <BrowserRouter>
