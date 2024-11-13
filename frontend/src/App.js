@@ -46,7 +46,7 @@ function App() {
     }
   }, [portfolioData]);
 
-  axios.post('https://sudha-portfolio-five.vercel.app/')
+  axios.post('https://sudha-portfolio-five.vercel.app/admin')
   return (
     <>
       <BrowserRouter>
