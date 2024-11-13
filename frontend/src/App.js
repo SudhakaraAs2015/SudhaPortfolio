@@ -19,7 +19,6 @@ function App() {
     (state) => state.root
   );
   const dispatch = useDispatch();
-
   const getPortfolioData = async () => {
     try {
       dispatch(ShowLoading());
@@ -45,6 +44,7 @@ function App() {
     }
   }, [portfolioData]);
 
+ 
   return (
     <>
       <BrowserRouter>
