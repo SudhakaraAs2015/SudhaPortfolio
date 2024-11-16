@@ -1,7 +1,7 @@
 import React from "react";
 import { Form, Input, message } from "antd";
 import { useDispatch, useSelector } from "react-redux";
-import axios from 'axios';
+import axiosInstance from '../../axiosInstance';
 import { ShowLoading, HideLoading } from '../../redux/rootSlice';
 
 function AdminIntro() {
@@ -11,7 +11,8 @@ function AdminIntro() {
   const onFinish = async (values) => {
     try {
       dispatch(ShowLoading());
-      const response = await axios.put('https://sudhaportfolio.onrender.com/update-intro', {
+      // Use the axios instance here
+      const response = await axiosInstance.put('/update-intro', {
         ...values,
         _id: portfolioData.intro._id,
       });
@@ -25,7 +26,7 @@ function AdminIntro() {
       }
     } catch (error) {
       dispatch(HideLoading());
-      message.error(error.message);
+      message.error(error.message || 'An error occurred'); // Default error message
     }
   };
 
