@@ -21,7 +21,7 @@ function Intro() {
         <div>
             {/* Intro Section */}
             <div className='h-[60vh] bg-primary flex flex-col items-start justify-center gap-5 py-14'>
-                <h1 className='text-tertiary text-1xl sm:text-1xl mt-7'>Web Developer</h1>
+                <h1 className='text-tertiary text-1xl sm:text-1xl mt-16'>Web Developer</h1>
                 <h1 className='text-secondary text-2xl sm:text-3xl font-bold'>{greetText || " "}</h1>
                 <h1 className='text-secondary text-2xl sm:text-3xl font-bold'>{introText || ''}</h1>
                 <h1 className='text-secondary text-2xl sm:text-3xl font-bold'>{name || ""}</h1>

@@ -1,18 +1,27 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
 
-mongoose.connect(process.env.MONGO_URI)
+const connectDB = async () => {
+  try {
+    await mongoose.connect(process.env.MONGO_URI, { 
+      useNewUrlParser: true, 
+      useUnifiedTopology: true, 
+      serverSelectionTimeoutMS: 5000, // 5 seconds to select a server
+      socketTimeoutMS: 45000, // 45 seconds for socket inactivity
+    });
+    console.log("Sudha's DB is Connected");
+  } catch (err) {
+    console.error("Error connecting to Sudha's DB:", err);
+    process.exit(1); // Exit the app if the DB connection fails
+  }
+};
+
+connectDB(); // Call the function to connect
+
 const connection = mongoose.connection;
-connection.on('connected',()=>{
-    console.log("Sudha's DB is Connected" , );
-    
-});
 
-connection.on('Error',(err)=>{
-    console.log("Error Connecting Sudha's DB :", err);
-    
-});
 connection.on('disconnected', () => {
-    console.log("Sudha's DB Disconnected");
+  console.log("Sudha's DB Disconnected");
+  setTimeout(connectDB, 5000); // Retry connection after 5 seconds
 });
 
 module.exports = mongoose;
