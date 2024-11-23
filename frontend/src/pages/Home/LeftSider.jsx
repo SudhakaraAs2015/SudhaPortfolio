@@ -7,7 +7,7 @@ function LeftSider() {
         <div className="flex flex-col gap-3 sm:flex-row">
           {/* LinkedIn */}
           <a
-            href="https://www.linkedin.com/in/sudhakara-h-n-as"
+            href="https://www.linkedin.com/in/Sudhakarahn"
             target="_blank"
             rel="noopener noreferrer"
           >
